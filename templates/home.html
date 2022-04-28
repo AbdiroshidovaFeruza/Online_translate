@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lug`at</title>
+  
+
+</head>
+<body>
+  
+{% extends 'base.html' %}  
+
+{% block content %}
+  <div style="margin: 20px;"> 
+      <div style="margin: 20px 0; text-align: center;" class="alert alert-warning" role="alert">
+      <i style="font-size: 25px;" class="material-icons">&#xe8e2;</i>   <h3 style="display: inline;"> Online Translate </h3>
+      <hr>
+      </div>
+
+    <form action="/translated" method="get">
+
+      <div class="form-floating">
+        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" name="text" style="height: 100px"></textarea>
+        <label for="floatingTextarea2">Write your text here</label>
+      </div>  
+        <br>
+      
+      <center><h1>Choose the language</h1></center>
+      <select class="form-select" aria-label="Default select example" name="lang" >
+        <option selected><center>Open this select menu</center></option>
+        <option value="en">English</option>
+        <option value="ar">Arabic</option>
+        <option value="ru">Russian</option>
+        <option value="uz">Uzbek</option>
+      </select>
+      <br>
+
+      <button type="submit" class="btn btn-success">Translate</button>
+    
+    </form>
+  </div>
+{% endblock content %}
+
+</body>
+</html>
