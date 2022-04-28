@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 googletrans = "==4.0.0-rc1"
 django = "*"
+whitenoise = "==5.1.0"
+gunicorn = "*"
 
 [dev-packages]
 
